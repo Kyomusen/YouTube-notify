@@ -1,8 +1,6 @@
 name: YouTube Notification
 
 on:
-  schedule:
-    - cron: '1/5 * * * *'
   push:
     branches:
       - main
@@ -28,7 +26,7 @@ jobs:
 
       - name: Commit and Push changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "kyomu53n@gmail.com"
+          git config --local user.name "Kyomusen"
           git add history.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update history [skip ci]" && git push)
